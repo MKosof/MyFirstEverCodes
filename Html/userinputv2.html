@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <!-- the first line of script means it gets executed only after the whole website loads, so taht it can see the form (since its below it in the code)-->
+    <!-- ie document.addEventListener('DOMContentLoaded',function(){ code here will be executed after website loads });-->
+    <!-- #text_103 is just a random id i put on the form below, can be anything, so is the #name-->
+    <!-- event.preventDefault(); does what return false; did in the other version, stopping whatever the default thing to do when 'submit' happens in this case-->
+        <script>
+            document.addEventListener('DOMContentLoaded',function()
+            {
+                document.querySelector('#text_103').addEventListener('submit',function(event)
+                {
+                    let name = document.querySelector('#name').value;
+                    if (name.toLowerCase() == "thayer")
+                    {
+                        alert('I LOVE YOU '+name.toUpperCase());
+                    }
+                    else if(name == "")
+                    {
+                        alert('Please enter your name!')
+                    }
+                    else
+                    {
+                        alert('Hey, '+name);
+                    }
+                    event.preventDefault();
+                });x
+            });
+        </script>
+
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+        <title>
+            Howdy
+        </title>
+    </head>
+    <body>
+        <form id="text_103">
+            <input id="name" type="text" autocomplete="off" autofocus placeholder="Enter your first name!">
+            <button type="submit">Press me!!</button>
+        </form>
+
+    </body>
+</html>

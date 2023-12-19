@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- here i've made the document.querySelector('#text_in') equal to input_text, so i dont have to type it over and over again
+        could do that with the document.querySelector('#text_out') as well, but wanted to leave it as an example-->
+        <script>
+            document.addEventListener('DOMContentLoaded',function()
+            {
+                document.querySelector('#text_out').innerHTML= 'Hello, whoever you are!'
+                let input_text = document.querySelector('#text_in');
+                input_text.addEventListener('keyup',function(event)
+                {
+                    if(input_text.value.toLowerCase()=='thayer' || input_text.value.toLowerCase()=='wifey' )
+                    {
+                        document.querySelector('#text_out').innerHTML= 'I LOVE YOU MY WIFEY !!! <3 <3 <3<br> <img width="600" src="https://ih1.redbubble.net/image.810140396.1777/flat,750x,075,f-pad,750x1000,f8f8f8.u6.jpg">'
+                    }
+                    else if (input_text.value)
+                    {
+                        document.querySelector('#text_out').innerHTML= `Hello, ${input_text.value}!`;
+                    }
+                    
+                    else
+                    {
+                        document.querySelector('#text_out').innerHTML= 'Hello, whoever you are!'
+                    }
+                });
+            });
+        </script>
+
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+        <title>
+            Howdy
+        </title>
+    </head>
+    <body>
+        <form>
+            <input id="text_in" type="text" autocomplete="off" autofocus placeholder="Enter your first name!">
+        </form>
+        <p id="text_out">
+
+        </p>
+    </body>
+</html>

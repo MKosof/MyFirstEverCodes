@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- here we can do <script src="file_name.js"> to load the script from a different file .-->
+        <script>
+            function greet()
+            {
+                let name = document.querySelector('#name').value;
+                if (name.toLowerCase() == "thayer")
+                {
+                    alert('I LOVE YOU '+name.toUpperCase());
+                }
+                else if(name == "")
+                {
+                    alert('Please enter your name!')
+                }
+                else
+                {
+                    alert('Hey, '+name);
+                }
+            }
+        </script>
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+        <title>
+            howdy
+        </title>
+    </head>
+    <body>
+        <form onsubmit="greet(); return false;"> <!-- return false means doesnt submit the form, just returns function-->
+            <input id="name" type="text" autocomplete="off" autofocus placeholder="Enter your first name!">
+            <button type="submit">Press me!!</button>
+        </form>
+    </body>
+</html>
