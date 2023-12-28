@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!--can apply styles here instead of in individual tags to keep it more clean.-->
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title>
+    </head>
+    <body>
+       {% block body %} 
+            
+       {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block title %}
+Login site.
+{% endblock %}
+
+
+{% block body %}
+    <p>
+        Welcome to my login webpage!
+        <div>
+            <form action="/loggedin" method="post">
+                <!-- name here is the Key name, which happens to be also "name"-->
+                <input name="username" type="text" placeholder="Enter your username!" autocomplete="off" autofocus> <br><br>
+                <input name="password" type="password" placeholder="Enter your password" autocomplete="off"> <br> <br>
+                <button type="submit"> Log in!</button>
+                <button type="submit" formaction="/signup"> Sign up!</button>
+            </form>
+        </div>
+    </p>
+{% endblock %}
