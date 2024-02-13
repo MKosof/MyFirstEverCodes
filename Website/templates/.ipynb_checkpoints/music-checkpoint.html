@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <p>
+        Look at this hekkin fella! <br>
+        <video autoplay loop controls>
+            <source src= {{url_for( 'static' , filename="Jam.webm"  )}} type="video/webm">
+        </video>
+    </p>
+{% endblock %}

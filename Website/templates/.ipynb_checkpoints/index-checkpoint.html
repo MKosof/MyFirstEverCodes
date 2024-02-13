@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <p>
+        Index <br>
+        Hello{{name_placeholder}}
+        <div>
+            <form>
+                <!-- name here is the Key name, which happens to be also "name"-->
+                <input name="name" type="text" placeholder="Enter your name!" autocomplete="off" autofocus>
+                <button type="submit"> Greet.</button>
+            </form>
+        </div>
+        <br>
+        <div>
+            <form action="/music">
+                <button type="submit"> Jam!</button>
+            </form>
+        </div>
+    </p>
+{% endblock %}

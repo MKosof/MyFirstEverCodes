@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!--can apply styles here instead of in individual tags to keep it more clean.-->
+        <style>
+            body{
+                text-align: center;
+            }
+        </style>
+        <!--the .centered is a class, it can be used on the tags bellow
+        using class ="centered" and it will apply whatever is in its braces {} to the tags it is applied ie main-->
+        <!-- can use " <link href="file_name.css" rel="stylesheet"> "
+        as a link to a file that will contain the <style> code that is above to keep this file cleaner
+        no need for the style tag in the .css file-->
+        <title>
+
+        </title>
+    </head>
+    <body>
+       {% block body %} 
+            
+       {% endblock %}
+    </body>
+</html>

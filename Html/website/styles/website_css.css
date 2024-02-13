@@ -1,0 +1,239 @@
+html
+{
+    font-size: 62.5%;
+}
+body
+{
+    margin: 0;
+    padding-block-start: 6rem;
+    padding-inline-start: 8rem;
+    padding-bottom: 1000px;
+}
+p
+{
+    font-family: roboto;
+    margin-top:0rem;
+    margin-bottom: 0.2rem;
+
+}
+
+.leftMenu
+{
+    background-color: white;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0rem;
+    width: 8rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .sideButton
+    {
+        display: flex;
+        align-items: center;
+        width: 40%;
+        height:6rem;
+    }
+
+.topBar
+{
+    background-color: white;
+    position: fixed;
+    top:0;
+    left:8rem;
+    right:0;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+    .logoContainer
+    {
+        width:9rem;
+        flex-shrink: 0;
+        
+    }
+        .logo
+        {
+            position:relative;
+            top:50%;
+            transform: translateY(-50%);
+            cursor:pointer;
+        }
+    
+    .searchBarContainer
+    {   
+        margin-inline:2rem;
+        flex:1;
+        height:100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .searchBar
+        {   
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 50rem;
+            height: 80%;
+            padding-block: 0;
+            padding-inline-start: 1rem;
+            padding-inline-end: 0rem;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border:solid;
+            border-width: 1px;
+            border-color: gray;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+        }
+
+        .searchButton
+        {
+            box-sizing: border-box;
+            height:80%;
+            width:5rem;
+            border-start-start-radius: 0;
+            border:solid;
+            border-width: 1px;
+            border-left-width:0px ;
+            display: flex;
+            border-start-end-radius: 20px;
+            border-end-end-radius: 20px;
+            padding: 0;
+        }
+
+
+    .rightMenuContainer
+    {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        width: 26rem;
+    }
+        
+        .rightButtons
+        {
+            display: flex;
+            justify-content: center;
+            width: 6.5rem;
+            height:50%;
+            cursor:pointer;
+        }
+        
+        .rightButtons:hover
+        {
+            height: 100%;
+            background-color: #E0E0E0;
+            cursor: pointer;
+        }
+
+
+
+.allVideosContainer
+{
+    width: 1fr;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+@media (min-width:0px) and (max-width:600px){
+    .allVideosContainer
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media (min-width:601px) and (max-width:1000px){
+    .allVideosContainer
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (min-width:1001px) and (max-width:1400px){
+    .allVideosContainer
+    {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (min-width:1401px) and (max-width:1800px){
+    .allVideosContainer
+    {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media (min-width:1801px) and (max-width:2200px){
+    .allVideosContainer
+    {
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
+
+
+    .videoContainer
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        vertical-align: top;
+        margin-inline:0.5rem;
+        margin-bottom: 1rem;
+    }
+
+        .thumbnailCointaler
+        {
+            width: 100%;
+        }
+
+            .thumbnail
+            {
+                width: 100%;
+                border-radius: 1.5rem;
+            }
+
+        .videoInfoContainer
+        {
+            display: grid;
+            grid-template-columns: 0.12fr 0.88fr;
+        }
+
+            .channelImageContainer
+            {
+                max-width: 100%;
+            }
+
+                .channelImage
+                {
+                    max-width: 100%;
+                    border-radius: 100%;
+                }
+
+            .description
+            {
+                margin-left:0.2rem;
+            }
+
+                .videoTitle
+                {
+                    margin-bottom: 1rem;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                }
+
+                .accountName
+                {
+                    font-size: 1.2rem;
+                    color:#404040
+                }
+
+                .videoStats
+                {
+                    font-size: 1.2rem;
+                    color:#404040
+                }
